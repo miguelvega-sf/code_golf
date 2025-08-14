@@ -16,15 +16,13 @@ m = [
     (1, "I")
 ]
 
-def r(i):
-    o = ''
-    n = int(i)
-    for v, l in m:
-        while n >= v:
-            n = n - v
-            o += l
-    print(o)
-
-with open(sys.argv[1], "r") as f:
-    for l in f:
-        r(l)
+def r():
+    for r in open(sys.argv[1]):
+        o = ''
+        n = int(r)
+        for v, l in m:
+            while n >= v:
+                n = n - v
+                o += l
+        print(o)
+r()
